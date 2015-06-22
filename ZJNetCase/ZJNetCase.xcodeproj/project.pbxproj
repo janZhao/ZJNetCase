@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		066F814E1B36BAA400277424 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 066F814D1B36BAA400277424 /* main.m */; };
-		066F81511B36BAA400277424 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 066F81501B36BAA400277424 /* AppDelegate.m */; };
 		066F81541B36BAA400277424 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 066F81531B36BAA400277424 /* ViewController.m */; };
 		066F81571B36BAA400277424 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 066F81551B36BAA400277424 /* Main.storyboard */; };
 		066F81591B36BAA400277424 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 066F81581B36BAA400277424 /* Images.xcassets */; };
@@ -22,6 +20,10 @@
 		066F81AA1B36CD8D00277424 /* ZJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 066F81A91B36CD8D00277424 /* ZJNavigationController.m */; };
 		066F81AD1B36CDED00277424 /* ZJNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 066F81AC1B36CDED00277424 /* ZJNewsViewController.m */; };
 		066F81B01B36CE0900277424 /* ZJReadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 066F81AF1B36CE0900277424 /* ZJReadingViewController.m */; };
+		06EBE1F41B38044100B34FBE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06EBE1F21B38044100B34FBE /* AppDelegate.m */; };
+		06EBE1F51B38044100B34FBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 06EBE1F31B38044100B34FBE /* main.m */; };
+		06EBE1F81B3806DD00B34FBE /* ZJNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 06EBE1F71B3806DD00B34FBE /* ZJNavigationBar.m */; };
+		06EBE1FB1B3808E100B34FBE /* ZJAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06EBE1FA1B3808E100B34FBE /* ZJAdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +39,6 @@
 /* Begin PBXFileReference section */
 		066F81481B36BAA400277424 /* ZJNetCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZJNetCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		066F814C1B36BAA400277424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		066F814D1B36BAA400277424 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../main.m; sourceTree = "<group>"; };
-		066F814F1B36BAA400277424 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
-		066F81501B36BAA400277424 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
 		066F81521B36BAA400277424 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		066F81531B36BAA400277424 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		066F81561B36BAA400277424 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,6 +64,13 @@
 		066F81AC1B36CDED00277424 /* ZJNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJNewsViewController.m; sourceTree = "<group>"; };
 		066F81AE1B36CE0900277424 /* ZJReadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJReadingViewController.h; sourceTree = "<group>"; };
 		066F81AF1B36CE0900277424 /* ZJReadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJReadingViewController.m; sourceTree = "<group>"; };
+		06EBE1F11B38044100B34FBE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ZJNetCase/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		06EBE1F21B38044100B34FBE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ZJNetCase/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		06EBE1F31B38044100B34FBE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ZJNetCase/main.m; sourceTree = SOURCE_ROOT; };
+		06EBE1F61B3806DD00B34FBE /* ZJNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJNavigationBar.h; sourceTree = "<group>"; };
+		06EBE1F71B3806DD00B34FBE /* ZJNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJNavigationBar.m; sourceTree = "<group>"; };
+		06EBE1F91B3808E100B34FBE /* ZJAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJAdViewController.h; sourceTree = "<group>"; };
+		06EBE1FA1B3808E100B34FBE /* ZJAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJAdViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,9 +168,9 @@
 		066F817B1B36BDBB00277424 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				066F814D1B36BAA400277424 /* main.m */,
-				066F814F1B36BAA400277424 /* AppDelegate.h */,
-				066F81501B36BAA400277424 /* AppDelegate.m */,
+				06EBE1F11B38044100B34FBE /* AppDelegate.h */,
+				06EBE1F21B38044100B34FBE /* AppDelegate.m */,
+				06EBE1F31B38044100B34FBE /* main.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -176,6 +182,8 @@
 				066F81891B36BE3F00277424 /* ZJTitleView.m */,
 				066F81991B36C61C00277424 /* ZJLeftMenu.h */,
 				066F819A1B36C61C00277424 /* ZJLeftMenu.m */,
+				06EBE1F61B3806DD00B34FBE /* ZJNavigationBar.h */,
+				06EBE1F71B3806DD00B34FBE /* ZJNavigationBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -189,6 +197,8 @@
 				066F81AC1B36CDED00277424 /* ZJNewsViewController.m */,
 				066F81AE1B36CE0900277424 /* ZJReadingViewController.h */,
 				066F81AF1B36CE0900277424 /* ZJReadingViewController.m */,
+				06EBE1F91B3808E100B34FBE /* ZJAdViewController.h */,
+				06EBE1FA1B3808E100B34FBE /* ZJAdViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -293,17 +303,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06EBE1F51B38044100B34FBE /* main.m in Sources */,
 				066F81AD1B36CDED00277424 /* ZJNewsViewController.m in Sources */,
 				066F818A1B36BE3F00277424 /* ZJTitleView.m in Sources */,
 				066F819B1B36C61C00277424 /* ZJLeftMenu.m in Sources */,
 				066F81911B36C22200277424 /* UIBarButtonItem+JYDExtension.m in Sources */,
 				066F81541B36BAA400277424 /* ViewController.m in Sources */,
-				066F81511B36BAA400277424 /* AppDelegate.m in Sources */,
 				066F81941B36C26100277424 /* UIView+JYDExtension.m in Sources */,
 				066F81AA1B36CD8D00277424 /* ZJNavigationController.m in Sources */,
+				06EBE1F41B38044100B34FBE /* AppDelegate.m in Sources */,
+				06EBE1F81B3806DD00B34FBE /* ZJNavigationBar.m in Sources */,
 				066F81971B36C2AF00277424 /* UIImage+JYDExtention.m in Sources */,
+				06EBE1FB1B3808E100B34FBE /* ZJAdViewController.m in Sources */,
 				066F81B01B36CE0900277424 /* ZJReadingViewController.m in Sources */,
-				066F814E1B36BAA400277424 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,9 +443,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "${SRCROOT}/ZJNetCase/PrefixHeader.pch";
 				INFOPLIST_FILE = ZJNetCase/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -443,9 +457,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "${SRCROOT}/ZJNetCase/PrefixHeader.pch";
 				INFOPLIST_FILE = ZJNetCase/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -504,6 +520,7 @@
 				066F816D1B36BAA500277424 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		066F816E1B36BAA500277424 /* Build configuration list for PBXNativeTarget "ZJNetCaseTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +529,7 @@
 				066F81701B36BAA500277424 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

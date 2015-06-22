@@ -125,13 +125,14 @@
         
         // 添加一个遮盖
         UIButton *cover = [[UIButton alloc] init];
+        cover.tag = 1000;
         [cover addTarget:self action:@selector(coverClick:) forControlEvents:UIControlEventTouchUpInside];
         cover.frame = showingView.bounds;
         [showingView addSubview:cover];
     }];
 }
 
-- (void)coverClick:(UIButton *)cover
+- (void)coverClick:(UIView *)cover
 {
     [UIView animateWithDuration:0.25 animations:^{
         self.showingNavigationController.view.transform = CGAffineTransformIdentity;
@@ -154,13 +155,15 @@
     
     // 1.显示新控制器的view
     ZJNavigationController *newNav = self.childViewControllers[toIndex];
+    [self.view addSubview:newNav.view];
+    
     // 设置新控制的transform跟旧控制器一样
     newNav.view.transform = oldNav.view.transform;
     // 设置阴影
     newNav.view.layer.shadowColor = [UIColor blackColor].CGColor;
     newNav.view.layer.shadowOffset = CGSizeMake(-3, 0);
     newNav.view.layer.shadowOpacity = 0.2;
-    [self.view addSubview:newNav.view];
+
     
     // 2.设置当前正在显示的控制器
     self.showingNavigationController = newNav;
@@ -169,6 +172,9 @@
     [UIView animateWithDuration:0.25 animations:^{
         newNav.view.transform = CGAffineTransformIdentity;
     }];
+    
+    // 3.点击遮盖
+    [self coverClick:[newNav.view viewWithTag:1000]];
 }
 
 
