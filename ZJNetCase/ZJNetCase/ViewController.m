@@ -12,6 +12,13 @@
 #import "ZJTitleView.h"
 #import "ZJReadingViewController.h"
 #import "ZJNewsViewController.h"
+#import "ZJRightMenuController.h"
+#import "ZJRightMenuCenterViewRow.h"
+
+#define ZJCoverTag 100
+#define ZJLeftMenuW 150
+#define ZJLeftMenuH 300
+#define ZJLeftMenuY 50
 
 @interface ViewController ()<ZJLeftMenuDelegate>
 
@@ -19,7 +26,10 @@
  *  正在显示的导航控制器
  */
 @property (nonatomic, weak) ZJNavigationController *showingNavigationController;
+@property (weak, nonatomic) IBOutlet UIImageView *side_bg;
 
+@property (nonatomic, weak) ZJLeftMenu *leftMenu;
+@property (nonatomic, strong) ZJRightMenuController *rightMenuVc;
 @end
 
 @implementation ViewController
@@ -60,12 +70,27 @@
     leftMenu.height = 300;
     leftMenu.width = 200;
     leftMenu.y = 60;
+    self.leftMenu = leftMenu;
     [self.view insertSubview:leftMenu atIndex:1];
+    
+    // 3.添加右菜单
+    [self setupRightMenu];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
+}
+
+/**
+ *  添加右菜单
+ */
+- (void)setupRightMenu
+{
+    ZJRightMenuController *rightMenuVc = [[ZJRightMenuController alloc] init];
+    rightMenuVc.view.x = self.view.width - rightMenuVc.view.width;
+    [self.view insertSubview:rightMenuVc.view atIndex:1];
+    self.rightMenuVc = rightMenuVc;
 }
 
 /**
@@ -85,8 +110,8 @@
     vc.navigationItem.titleView = titleView;
     
     // 3.设置左右按钮
-    vc.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImageName:@"top_navigation_menuicon" target:self action:@selector(leftMenu)];
-    vc.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImageName:@"top_navigation_infoicon" target:self action:@selector(rightMenu)];
+    vc.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImageName:@"top_navigation_menuicon" target:self action:@selector(leftMenuClick)];
+    vc.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImageName:@"top_navigation_infoicon" target:self action:@selector(rightMenuClick)];
     
     // 4.包装一个导航控制器
     ZJNavigationController *nav = [[ZJNavigationController alloc] initWithRootViewController:vc];
@@ -98,9 +123,12 @@
 
 #pragma mark - 监听导航栏按钮点击
 
-- (void)leftMenu
+- (void)leftMenuClick
 {
-    JYDLog(@"leftMenu---");
+    JYDLog(@"leftMenuClick---");
+    self.leftMenu.hidden = NO;
+    self.rightMenuVc.view.hidden = YES;
+    
     [UIView animateWithDuration:0.25 animations:^{
         // 取出正在显示的导航控制器的view
         UIView *showingView = self.showingNavigationController.view;
@@ -141,9 +169,43 @@
     }];
 }
 
-- (void)rightMenu
+- (void)rightMenuClick
 {
-    JYDLog(@"rightMenu");
+    JYDLog(@"rightMenuClick");
+    self.leftMenu.hidden = YES;
+    self.rightMenuVc.view.hidden = NO;
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        // 取出正在显示的导航控制器的view
+        UIView *showingView = self.showingNavigationController.view;
+        
+        // 缩放比例
+        CGFloat navH = [UIScreen mainScreen].bounds.size.height - 2 * ZJLeftMenuY;
+        CGFloat scale = navH / [UIScreen mainScreen].bounds.size.height;
+        
+        // 菜单左边的间距
+        CGFloat leftMenuMargin = [UIScreen mainScreen].bounds.size.width * (1 - scale) * 0.5;
+        CGFloat translateX = leftMenuMargin - self.rightMenuVc.view.width;
+        
+        CGFloat topMargin = [UIScreen mainScreen].bounds.size.height * (1 - scale) * 0.5;
+        CGFloat translateY = ZJLeftMenuY - topMargin;
+        
+        // 缩放
+        CGAffineTransform scaleForm = CGAffineTransformMakeScale(scale, scale);
+        // 平移
+        CGAffineTransform translateForm = CGAffineTransformTranslate(scaleForm, translateX / scale, translateY / scale);
+        
+        showingView.transform = translateForm;
+        
+        // 添加一个遮盖
+        UIButton *cover = [[UIButton alloc] init];
+        cover.tag = ZJCoverTag;
+        [cover addTarget:self action:@selector(coverClick:) forControlEvents:UIControlEventTouchUpInside];
+        cover.frame = showingView.bounds;
+        [showingView addSubview:cover];
+    } completion:^(BOOL finished) {
+        [self.rightMenuVc didShow];
+    }];
 }
 
 #pragma mark - ZJLeftMenuDelegate

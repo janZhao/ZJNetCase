@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0616A0521B4F66CE00B1D585 /* ZJRightMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0616A0501B4F66CE00B1D585 /* ZJRightMenuController.m */; };
+		0616A0531B4F66CE00B1D585 /* ZJRightMenuController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0616A0511B4F66CE00B1D585 /* ZJRightMenuController.xib */; };
+		0616A0571B4F66E100B1D585 /* ZJRightMenuCenterViewRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0616A0551B4F66E100B1D585 /* ZJRightMenuCenterViewRow.m */; };
+		0616A0581B4F66E100B1D585 /* ZJRightMenuCenterViewRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0616A0561B4F66E100B1D585 /* ZJRightMenuCenterViewRow.xib */; };
+		0616A05A1B4F6C5300B1D585 /* sidebar_bg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0616A0591B4F6C5300B1D585 /* sidebar_bg@2x.jpg */; };
 		066F81541B36BAA400277424 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 066F81531B36BAA400277424 /* ViewController.m */; };
 		066F81571B36BAA400277424 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 066F81551B36BAA400277424 /* Main.storyboard */; };
 		066F81591B36BAA400277424 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 066F81581B36BAA400277424 /* Images.xcassets */; };
@@ -37,6 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0616A04F1B4F66CE00B1D585 /* ZJRightMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJRightMenuController.h; sourceTree = "<group>"; };
+		0616A0501B4F66CE00B1D585 /* ZJRightMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJRightMenuController.m; sourceTree = "<group>"; };
+		0616A0511B4F66CE00B1D585 /* ZJRightMenuController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJRightMenuController.xib; sourceTree = "<group>"; };
+		0616A0541B4F66E100B1D585 /* ZJRightMenuCenterViewRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJRightMenuCenterViewRow.h; sourceTree = "<group>"; };
+		0616A0551B4F66E100B1D585 /* ZJRightMenuCenterViewRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJRightMenuCenterViewRow.m; sourceTree = "<group>"; };
+		0616A0561B4F66E100B1D585 /* ZJRightMenuCenterViewRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZJRightMenuCenterViewRow.xib; sourceTree = "<group>"; };
+		0616A0591B4F6C5300B1D585 /* sidebar_bg@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sidebar_bg@2x.jpg"; sourceTree = "<group>"; };
 		066F81481B36BAA400277424 /* ZJNetCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZJNetCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		066F814C1B36BAA400277424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		066F81521B36BAA400277424 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -112,14 +124,14 @@
 		066F814A1B36BAA400277424 /* ZJNetCase */ = {
 			isa = PBXGroup;
 			children = (
-				066F819E1B36CD4E00277424 /* controller */,
-				066F817B1B36BDBB00277424 /* Other */,
-				066F817F1B36BDBB00277424 /* View */,
-				066F81711B36BDAE00277424 /* Category */,
 				066F81521B36BAA400277424 /* ViewController.h */,
 				066F81531B36BAA400277424 /* ViewController.m */,
 				066F81551B36BAA400277424 /* Main.storyboard */,
 				066F815A1B36BAA400277424 /* LaunchScreen.xib */,
+				066F819E1B36CD4E00277424 /* controller */,
+				066F817B1B36BDBB00277424 /* Other */,
+				066F817F1B36BDBB00277424 /* View */,
+				066F81711B36BDAE00277424 /* Category */,
 				066F814B1B36BAA400277424 /* Supporting Files */,
 			);
 			path = ZJNetCase;
@@ -128,6 +140,7 @@
 		066F814B1B36BAA400277424 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0616A0591B4F6C5300B1D585 /* sidebar_bg@2x.jpg */,
 				066F81581B36BAA400277424 /* Images.xcassets */,
 				066F814C1B36BAA400277424 /* Info.plist */,
 				066F818E1B36BF7D00277424 /* PrefixHeader.pch */,
@@ -178,6 +191,9 @@
 		066F817F1B36BDBB00277424 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0616A0541B4F66E100B1D585 /* ZJRightMenuCenterViewRow.h */,
+				0616A0551B4F66E100B1D585 /* ZJRightMenuCenterViewRow.m */,
+				0616A0561B4F66E100B1D585 /* ZJRightMenuCenterViewRow.xib */,
 				066F81881B36BE3F00277424 /* ZJTitleView.h */,
 				066F81891B36BE3F00277424 /* ZJTitleView.m */,
 				066F81991B36C61C00277424 /* ZJLeftMenu.h */,
@@ -191,6 +207,9 @@
 		066F819E1B36CD4E00277424 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				0616A04F1B4F66CE00B1D585 /* ZJRightMenuController.h */,
+				0616A0501B4F66CE00B1D585 /* ZJRightMenuController.m */,
+				0616A0511B4F66CE00B1D585 /* ZJRightMenuController.xib */,
 				066F81A81B36CD8D00277424 /* ZJNavigationController.h */,
 				066F81A91B36CD8D00277424 /* ZJNavigationController.m */,
 				066F81AB1B36CDED00277424 /* ZJNewsViewController.h */,
@@ -285,6 +304,9 @@
 			files = (
 				066F81571B36BAA400277424 /* Main.storyboard in Resources */,
 				066F815C1B36BAA400277424 /* LaunchScreen.xib in Resources */,
+				0616A05A1B4F6C5300B1D585 /* sidebar_bg@2x.jpg in Resources */,
+				0616A0581B4F66E100B1D585 /* ZJRightMenuCenterViewRow.xib in Resources */,
+				0616A0531B4F66CE00B1D585 /* ZJRightMenuController.xib in Resources */,
 				066F81591B36BAA400277424 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,9 +325,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0616A0521B4F66CE00B1D585 /* ZJRightMenuController.m in Sources */,
 				06EBE1F51B38044100B34FBE /* main.m in Sources */,
 				066F81AD1B36CDED00277424 /* ZJNewsViewController.m in Sources */,
 				066F818A1B36BE3F00277424 /* ZJTitleView.m in Sources */,
+				0616A0571B4F66E100B1D585 /* ZJRightMenuCenterViewRow.m in Sources */,
 				066F819B1B36C61C00277424 /* ZJLeftMenu.m in Sources */,
 				066F81911B36C22200277424 /* UIBarButtonItem+JYDExtension.m in Sources */,
 				066F81541B36BAA400277424 /* ViewController.m in Sources */,
